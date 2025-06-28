@@ -1,6 +1,6 @@
 export type BottomTabParamList = {
   Home: undefined;
-  Calender: undefined;
+  Calendar: undefined;
   Library: undefined;
   MyPage: undefined;
 };

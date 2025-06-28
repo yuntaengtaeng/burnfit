@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import DefaultScreen from '../components/layout/DefaultScreen';
 
-const Calender = () => {
+const Calendar = () => {
   return (
     <DefaultScreen>
       <Text>Calender</Text>
@@ -10,4 +10,4 @@ const Calender = () => {
   );
 };
 
-export default Calender;
+export default Calendar;

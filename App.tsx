@@ -1,20 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { StyleSheet, View } from 'react-native';
+import { BottomTabParamList } from './src/navigation';
+import Home from './src/screens/Home';
+import Calender from './src/screens/Calender';
+import Library from './src/screens/Library';
+import MyPage from './src/screens/MyPage';
+import { NavigationContainer } from '@react-navigation/native';
+
+const Tab = createBottomTabNavigator<BottomTabParamList>();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={Home} />
+        <Tab.Screen name="Calender" component={Calender} />
+        <Tab.Screen name="Library" component={Library} />
+        <Tab.Screen name="MyPage" component={MyPage} />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
